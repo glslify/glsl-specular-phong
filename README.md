@@ -47,7 +47,7 @@ Computes the specular power in the Phong lighting model.
 * `lightDir` is a *unit length* `vec3` pointing from the surface point toward the light
 * `eyeDir` is a *unit length* `vec3` pointing from the surface point toward the camera
 * `normal` is the surface normal at the sample point
-* `shininess` is the exponent in the Phong equation (default `20.0`)
+* `shininess` is the exponent in the Phong equation
 
 **Returns** A `float` representing the specular power
 
