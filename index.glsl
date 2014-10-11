@@ -5,8 +5,8 @@ float phongSpecular(
   float shininess) {
 
   //Calculate Phong power
-  vec3 H = reflect(lightDirection, surfaceNormal);
-  return pow(max(0.0, dot(viewDirection, H)), shininess);
+  vec3 R = -reflect(lightDirection, surfaceNormal);
+  return pow(max(0.0, dot(viewDirection, R)), shininess);
 }
 
 #pragma glslify: export(phongSpecular)

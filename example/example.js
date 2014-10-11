@@ -13,7 +13,7 @@ void main() {\
 }',
   frag: '\
 precision mediump float;\n\
-#pragma glslify: blinnPhong = require(../index.glsl)\n\
+#pragma glslify: specular = require(../index.glsl)\n\
 varying vec2 uv;\n\
 uniform vec3 lightPosition;\n\
 void main() {\n\
@@ -27,7 +27,7 @@ void main() {\n\
   vec3 position = vec3(normal.xy, normal.z+5.0);\
   vec3 lightDir = normalize(lightPosition - position);\
   vec3 eyeDir = normalize(-position);\
-  float power = blinnPhong(lightDir, eyeDir, normal, 23.0);\n\
+  float power = specular(lightDir, eyeDir, normal, 23.0);\n\
   if(r > 1.0) {\n\
     gl_FragColor = vec4(0.0, 0.0, 1.0, 1.0);\n\
   } else {\n\
@@ -53,7 +53,7 @@ function render() {
   var theta = Date.now()*0.0005
   var x = Math.cos(theta)
   var y = Math.sin(theta)
-  shader.uniforms.lightPosition = [30.0*x, 4.0, 30.0*y]
+  shader.uniforms.lightPosition = [30.0*x, 10.0, 30.0*y]
   drawTriangle(gl)
   requestAnimationFrame(render)
 }

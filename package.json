@@ -1,0 +1,36 @@
+{
+  "name": "glsl-specular-phong",
+  "version": "1.0.0",
+  "description": "Phong specular distribution in GLSL",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "beefy example/example.js --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stackgl/glsl-specular-phong.git"
+  },
+  "keywords": [
+    "phong",
+    "glsl",
+    "specular",
+    "power"
+  ],
+  "author": "Mikola Lysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stackgl/glsl-specular-phong/issues"
+  },
+  "homepage": "https://github.com/stackgl/glsl-specular-phong",
+  "devDependencies": {
+    "glslify": "^1.6.0",
+    "beefy": "^2.1.1",
+    "a-big-triangle": "^1.0.0"
+  },
+  "browserify": {
+    "transform": "glslify"
+  }
+}
