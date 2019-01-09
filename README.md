@@ -19,7 +19,7 @@ void main() {
   vec3 lightDirection = normalize(lightPosition - surfacePosition);
   vec3 normal = normalize(surfaceNormal);
 
-  float power = blinnPhongSpec(lightDirection, viewDirection, normal, shininess);
+  float power = phongSpec(lightDirection, viewDirection, normal, shininess);
 
   gl_FragColor = vec4(power,power,power,1.0);
 }
